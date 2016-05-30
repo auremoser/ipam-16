@@ -19,8 +19,8 @@ aurelia@mozillafoundation.org
 
 ####resources
 
-* [Friendly Geo Intro by Joey Lee]()
-* [Lizzie Diamond tutorial on Leaflet]()
+* [Friendly Geo Intro by Joey Lee](https://github.com/joeyklee/hellowebmaps)
+* [Lyzi Diamond tutorial on Leaflet](http://lyzidiamond.com/posts/osgeo-august-meeting)
 * [Map Academy](http://academy.cartodb.com)
     + [CartoDB.js](http://academy.cartodb.com/courses/03-cartodbjs-ground-up/lesson-3.html) -- build a web app to visualize your data, allowing for user interaction
 	+ [SQL and PostGIS](http://academy.cartodb.com/courses/04-sql-postgis.html)
