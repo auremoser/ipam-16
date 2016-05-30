@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Seoul Provinces | CartoDB</title>
+    <title>California Counties | CartoDB</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
 
-    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
 
     <style>
       html, body, #map {
@@ -18,10 +18,23 @@
 
   </head>
   <body>
+
+    <script type="tooltip/html" id="tooltip_template">
+      <div class="cartodb-tooltip-content-wrapper">
+        <div class="cartodb-tooltip-content">
+          <h3>name</h3>
+          <p>{{name}}</p>
+          <h3>sqft</h3>
+          <p>{{sqft}}</p>
+          <h3>sqm</h3>
+          <p>{{sqm}}</p>
+        </div>
+      </div>
+      </script>
     <div id="map"></div>
 
     <!-- include cartodb.js library -->
-    <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
 
     <!-- place your code betwee the script tags below -->
     <script src="main.js"></script>

@@ -1,8 +1,8 @@
 window.onload = function() {
-    var vizjson_url = 'https://team.cartodb.com/u/aureliamoser/api/v2/viz/44acbe86-5970-11e5-8b9a-0e018d66dc29/viz.json'; // <-- Paste viz.json URL between quotes
+    var vizjson_url = 'https://auremoser.cartodb.com/api/v2/viz/66fc4e20-2689-11e6-8b37-0ecfd53eb7d3/viz.json'; // <-- Paste viz.json URL between quotes
 
     var options = {
-           sql: "SELECT * FROM skorea_provinces",
+           sql: "SELECT * FROM ca_area",
            // cartocss: ""
        }
 
@@ -10,12 +10,11 @@ window.onload = function() {
 
        // instantiate map object from Leaflet
        var mapObj = new L.Map(map, {  // <-- Replace map_id with your #id for rendering
-           center: [36.5500, 126.9667], // Seoul, South Korea
-           zoom: 7 // zoom projection to adjust starting point zoom
+           center: [36.052235, -118.243683], // ~ Los Angeles, California
+           zoom: 6 // zoom projection to adjust starting point zoom
        });
-
        // add basemap tiles
-       L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
+       L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
        }).addTo(mapObj);
 
@@ -29,5 +28,21 @@ window.onload = function() {
            })
            .error(function(err) {
                console.log("Map not created: " + err);
-           });
+           // });
+
+          sublayer.setInteractivity('cartodb_id, name, sqft, sqm');
+                           
+          // tooltip definition for createLayer()
+            var testTooltip = layer.leafletMap.viz.addOverlay({
+              type: 'tooltip',
+              layer: sublayer,
+              template: $('#tooltip_template').html(), 
+              width: 200,
+              position: 'bottom|right',
+              fields: [{ name: 'name', population: 'pop2005' }]
+            });
+            $('body').append(testTooltip.render().el);
+                  
+        });
     }
+
