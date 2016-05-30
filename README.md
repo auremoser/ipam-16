@@ -4,7 +4,8 @@
 
 ####description
 
-This repo holds data and minimal code for the Visualization working group. 
+This repo holds data and minimal code for the Visualization working group. Check out the [script for the workshop here](http://tinyurl.com/ipam-16-maps).
+
 We'll be going over mapping in general and then some specifics with OSM, Leaflet, CartoDB and other open source tools allowing users to design, publish, and share maps online. CartoDB automates the building of maps from dynamic data, applies style and query functions from CSS and SQL standards, and implements customizations to both UI and data structure components on the fly. So, we'll play with their editor to get used to more complex map-making with a Postgres backend. 
 
 The prerequisites are minimal; everyone is invited to attend, but participants will review geo-spatial data formatting, SQL querying, styling with CartoCSS, and the mechanics of map integration with CartoJS.
